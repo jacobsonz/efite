@@ -1,0 +1,44 @@
+# EpicLite configuration
+stamina:
+  max: 100.0
+  regen-per-second: 18.0
+  regen-delay-ms: 900        # no regen for this long after spending stamina
+  exhausted-damage-multiplier: 0.4
+  show-actionbar: true
+
+# Cost per melee attack, by weapon type.
+attack-cost:
+  SWORD: 6.0
+  AXE: 10.0
+  SPEAR: 7.0
+  MACE: 14.0
+
+combo:
+  window-ms: 900
+  # Damage multiplier per combo step (4 steps; the last is the finisher).
+  damage-multipliers: [1.0, 1.0, 1.15, 1.5]
+  finisher-knockback: 0.9
+
+dodge:
+  enabled: true
+  cost: 22.0
+  double-tap-ms: 300
+  cooldown-ms: 700
+  invulnerable-ticks: 10
+  speed: 0.95
+
+skills:
+  enabled: true              # triggered with the swap-hand key (F)
+  SWORD: { cost: 30.0, cooldown-ms: 6000, damage-multiplier: 1.8, range: 4.5, angle-degrees: 140 }
+  AXE:   { cost: 38.0, cooldown-ms: 8000, damage-multiplier: 2.0, radius: 3.5 }
+  SPEAR: { cost: 28.0, cooldown-ms: 5000, damage-multiplier: 1.6, distance: 7.0 }
+  MACE:  { cost: 45.0, cooldown-ms: 10000, damage-multiplier: 2.4, radius: 4.5 }
+
+animation:
+  enabled: true
+  # The resource pack must define this item model (it ships with EpicLite-ResourcePack.zip).
+  item-model: "eflite:slash_arc"
+  base-material: PAPER
+  # Tweak if the arc is rotated wrongly on your setup (degrees).
+  yaw-offset: 0.0
+  view-range: 1.0

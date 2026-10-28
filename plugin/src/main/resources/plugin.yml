@@ -1,0 +1,15 @@
+name: EpicLite
+version: ${version}
+main: dev.eflite.EpicLitePlugin
+api-version: "26.2"
+description: Souls-like combat mechanics (stamina, combos, dodge, weapon skills) with display-entity slash animations.
+commands:
+  eflite:
+    description: EpicLite admin command
+    usage: /eflite <reload|stamina|pack>
+    permission: eflite.admin
+permissions:
+  eflite.admin:
+    default: op
+  eflite.use:
+    default: true
